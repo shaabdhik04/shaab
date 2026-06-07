@@ -1,33 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>About</title>
-    <link rel="stylesheet" href="/static/style.css">
-</head>
-<body>
+{% extends 'base.html' %}
 
-<nav>
-    <div class="logo">Portfolio</div>
+{% block title %}About - Portfolio{% endblock %}
 
-    <ul>
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/skills">Skills</a></li>
-        <li><a href="/contact">Contact</a></li>
-    </ul>
-</nav>
-
-<section class="page">
-    <h1>About Me</h1>
-
-    <div class="card">
-        <p>
-            I am passionate about Software Development,
-            Web Technologies, AI, Cloud Computing and Databases.
-        </p>
+{% block content %}
+<main class="page-content">
+    <div class="container">
+        <div class="page-header">
+            <h1>About Me</h1>
+            <p>Get to know more about my background, interests, and aspirations.</p>
+        </div>
+        
+        <div class="card">
+            <p>
+                I am a passionate Computer Science student dedicated to building high-quality, efficient, and well-designed software systems. My interest lies at the intersection of Software Development, Web Technologies, Artificial Intelligence, Cloud Computing, and Database Management.
+            </p>
+            <br>
+            <p>
+                I thrive on solving complex problems, building responsive web interfaces, optimizing backend services, and working with modern cloud infrastructures. I am constantly learning new technologies and looking for opportunities to apply my knowledge in real-world environments.
+            </p>
+        </div>
     </div>
-</section>
-
-</body>
-</html>
+</main>
+{% endblock %}

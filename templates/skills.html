@@ -1,52 +1,44 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Skills</title>
-    <link rel="stylesheet" href="/static/style.css">
-</head>
-<body>
+{% extends 'base.html' %}
 
-<nav>
-    <div class="logo">Portfolio</div>
+{% block title %}Skills - Portfolio{% endblock %}
 
-    <ul>
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/skills">Skills</a></li>
-        <li><a href="/contact">Contact</a></li>
-    </ul>
-</nav>
-
-<section class="page">
-
-<h1>Skills</h1>
-
-<div class="project-grid">
-
-<div class="card">
-<h2>Python</h2>
-<p>OOP, Data Structures</p>
-</div>
-
-<div class="card">
-<h2>Web Development</h2>
-<p>HTML, CSS, JavaScript</p>
-</div>
-
-<div class="card">
-<h2>SQL</h2>
-<p>Database Design</p>
-</div>
-
-<div class="card">
-<h2>Cloud Computing</h2>
-<p>AWS Fundamentals</p>
-</div>
-
-</div>
-
-</section>
-
-</body>
-</html>
+{% block content %}
+<main class="page-content">
+    <div class="container">
+        <div class="page-header">
+            <h1>My Skills</h1>
+            <p>A compilation of my core technical abilities, languages, and technologies I work with.</p>
+        </div>
+        
+        <div class="skills-grid">
+            <!-- Python -->
+            <div class="card skill-card">
+                <div class="skill-icon">🐍</div>
+                <div class="skill-name">Python</div>
+                <p>Object-Oriented Programming (OOP), Data Structures, Algorithms, and Scripting.</p>
+            </div>
+            
+            <!-- Web Development -->
+            <div class="card skill-card">
+                <div class="skill-icon">💻</div>
+                <div class="skill-name">Web Development</div>
+                <p>Building responsive, attractive user interfaces with HTML, CSS, JavaScript, and Flask.</p>
+            </div>
+            
+            <!-- SQL -->
+            <div class="card skill-card">
+                <div class="skill-icon">🗄️</div>
+                <div class="skill-name">SQL</div>
+                <p>Database Design, Schema Management, Query Optimization, and Relational Databases.</p>
+            </div>
+            
+            <!-- Cloud Computing -->
+            <div class="card skill-card">
+                <div class="skill-icon">☁️</div>
+                <div class="skill-name">Cloud Computing</div>
+                <p>AWS Fundamentals, Cloud Infrastructure, deployment strategies, and serverless architectures.</p>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

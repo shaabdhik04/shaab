@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portfolio{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <!-- Brand -->
+            <a href="/" class="nav-logo">sha<span>.</span>ab</a>
+
+            <!-- Desktop Menu -->
+            <div class="nav-menu-wrapper">
+                <ul class="nav-links">
+                    <li><a href="/" class="{% if request.path == '/' %}active{% endif %}">Home</a></li>
+                    <li><a href="/about" class="{% if request.path == '/about' %}active{% endif %}">About</a></li>
+                    <li><a href="/skills" class="{% if request.path == '/skills' %}active{% endif %}">Skills</a></li>
+                    <li><a href="/projects" class="{% if request.path == '/projects' %}active{% endif %}">Projects</a>
+                    </li>
+                </ul>
+                <!-- Trailing Action -->
+                <a href="/contact" class="btn btn-primary">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">sha.ab</div>
+                <ul class="footer-socials">
+                    <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                    <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                </ul>
+            </div>
+            <div class="footer-copy">
+                &copy; 2026 Your Name. Built with precision.
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

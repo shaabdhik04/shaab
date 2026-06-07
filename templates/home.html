@@ -1,34 +1,74 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Home</title>
-    <link rel="stylesheet" href="/static/style.css">
-</head>
-<body>
+{% extends 'base.html' %}
 
-<nav>
-    <div class="logo">Portfolio</div>
+{% block title %}Home - Portfolio{% endblock %}
 
-    <ul>
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/skills">Skills</a></li>
-        <li><a href="/contact">Contact</a></li>
-    </ul>
-</nav>
+{% block content %}
+<section class="hero">
+    <div class="container hero-inner">
+        <!-- Left Column: Content -->
+        <div class="hero-content">
+            <!-- Availability Badge -->
+            <div class="availability-badge">
+                <span class="pulse-dot"></span>
+                Available for opportunities
+            </div>
 
-<section class="page">
-    <h1>Welcome</h1>
+            <!-- Headline -->
+            <h1>Hi, I'm <span class="highlight">Shaabdhik M Jain</span></h1>
 
-    <div class="card">
-        <h2>Hello, I'm Your Name</h2>
-        <p>
-            Computer Science Student, Python Developer,
-            Web Developer and Cloud Computing Enthusiast.
-        </p>
+            <!-- Description -->
+            <p class="hero-desc">
+                A Computer and communication engineering student passionate about building well-crafted software &mdash;
+                from backend systems to cloud-deployed web apps.
+            </p>
+
+            <!-- Tech Tags -->
+            <div class="hero-tags">
+                <span class="tag tag-primary">Python Developer</span>
+                <span class="tag tag-primary">Web Developer</span>
+
+            </div>
+
+            <!-- Actions -->
+            <div class="hero-actions">
+                <a href="/projects" class="btn btn-primary">
+                    View Projects &rarr;
+                </a>
+                <a href="/contact" class="btn btn-outline">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+
+        <!-- Right Column: Profile Stats Card -->
+        <div class="hero-visual">
+            <div class="card-backdrop"></div>
+            <div class="hero-avatar-card">
+                <!-- Avatar -->
+                <div class="avatar-circle">SH</div>
+
+                <!-- Profile Info -->
+                <div class="profile-info">
+                    <h2>Shaabdhik M Jain</h2>
+                    <p>CS Student &middot; Developer</p>
+                </div>
+
+                <!-- Divider -->
+                <div class="divider"></div>
+
+                <!-- Stats -->
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-num">3+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">4</span>
+                        <span class="stat-label">Domains</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
-
-</body>
-</html>
+{% endblock %}

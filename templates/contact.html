@@ -1,40 +1,40 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Contact</title>
-    <link rel="stylesheet" href="/static/style.css">
-</head>
-<body>
+{% extends 'base.html' %}
 
-<nav>
-    <div class="logo">Portfolio</div>
+{% block title %}Contact - Portfolio{% endblock %}
 
-    <ul>
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/skills">Skills</a></li>
-        <li><a href="/contact">Contact</a></li>
-    </ul>
-</nav>
+{% block content %}
+<main class="page-content">
+    <div class="container">
+        <div class="page-header">
+            <h1>Contact Me</h1>
+            <p>Have an opportunity, a project proposal, or just want to say hello? Drop a message below!</p>
+        </div>
 
-<section class="page">
+        <div class="contact-container card">
+            <form class="contact-form" action="#" method="POST">
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
 
-<h1>Contact Me</h1>
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
 
-<form class="contact-form">
+                <!-- Message -->
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Write your message here..."
+                        required></textarea>
+                </div>
 
-<input type="text" placeholder="Your Name">
-
-<input type="email" placeholder="Your Email">
-
-<textarea rows="6" placeholder="Your Message"></textarea>
-
-<button type="submit">Send Message</button>
-
-</form>
-
-</section>
-
-</body>
-</html>
+                <!-- Submit -->
+                <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</main>
+{% endblock %}

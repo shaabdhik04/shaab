@@ -1,45 +1,49 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Projects</title>
-    <link rel="stylesheet" href="/static/style.css">
-</head>
-<body>
+{% extends 'base.html' %}
 
-<nav>
-    <div class="logo">Portfolio</div>
+{% block title %}Projects - Portfolio{% endblock %}
 
-    <ul>
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/skills">Skills</a></li>
-        <li><a href="/contact">Contact</a></li>
-    </ul>
-</nav>
-
-<section class="page">
-    <h1>Projects</h1>
-
-    <div class="project-grid">
-
-        <div class="card">
-            <h2>Career Guidance System</h2>
-            <p>Career recommendation platform.</p>
+{% block content %}
+<main class="page-content">
+    <div class="container">
+        <div class="page-header">
+            <h1>My Projects</h1>
+            <p>A showcase of some of the software solutions, databases, and websites I have built.</p>
         </div>
-
-        <div class="card">
-            <h2>Student Database</h2>
-            <p>Database Management using SQL.</p>
+        
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="card project-card">
+                <div class="project-thumbnail pt-blue">
+                    🚀
+                </div>
+                <div class="project-body">
+                    <h3>Career Guidance System</h3>
+                    <p>A career recommendation platform designed to help students discover and explore academic pathways based on interests and aptitude.</p>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="card project-card">
+                <div class="project-thumbnail pt-purple">
+                    📊
+                </div>
+                <div class="project-body">
+                    <h3>sentimental analysis </h3>
+                    <p>classify the system that classifies then text into emotional categories using transformation model.</p>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="card project-card">
+                <div class="project-thumbnail pt-green">
+                    💼
+                </div>
+                <div class="project-body">
+                    <h3>Portfolio Website</h3>
+                    <p>A fully responsive, sleek personal portfolio website designed and developed using Flask, HTML5, Vanilla CSS, and modern web standards.</p>
+                </div>
+            </div>
         </div>
-
-        <div class="card">
-            <h2>Portfolio Website</h2>
-            <p>Responsive personal portfolio.</p>
-        </div>
-
     </div>
-</section>
-
-</body>
-</html>
+</main>
+{% endblock %}
